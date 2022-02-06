@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  /* background-image: url(./marvin-meyer-SYTO3xs06fU-unsplash.jpg); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.container-general {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7em;
+}
+
+.container {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.container-formulario-uno {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  background-color:#fff;
+  border: 1px solid #000;
+}
+
+.container-formulario-dos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  height: 630px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+.container-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  height: 350px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+
+/* input:focus { */
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  /* border-radius: 6px; */
+  /* outline: none; */
+/* } */
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0.5em;
+  font-size: 2em;
+}
+
+.campo-dni-consulta {
+  width: 350px;
+  height: 2.5em;
+  padding-left: 5px;
+  border: 1px solid #000;
+}
+
+.campo-dni {
+  width: 350px;
+  height: 2.5em;
+  margin: 0.5em;
+  padding-left: 5px;
+  border: 1px solid #000;
+}
+
+
+.campo-nombre {
+  width: 350px;
+  height: 2.5em;
+  margin: 0.3em;
+  padding-left: 5px;
+  border: 1px solid #000;
+}
+
+
+.campo-apellido1 {
+  width: 350px;
+  height: 2.5em;
+  margin: 0.3em;
+  padding-left: 5px;
+  border: 1px solid #000;
+}
+
+
+.campo-apellido2 {
+  width: 350px;
+  height: 2.5em;
+  margin: 0.3em;
+  padding-left: 5px;
+  border: 1px solid #000;
+}
+
+.campo-email {
+  width: 350px;
+  height: 2.5em;
+  margin: 0.3em;
+  padding-left: 5px;
+  border: 1px solid #000;
+}
+
+
+.campo-password {
+  width: 350px;
+  height: 2.5em;
+  margin: 0.3em;
+  padding-left: 5px;
+  border: 1px solid #000;
+}
+
+
+.boton-control {
+  width: 90%;
+  height: 2em;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #000;
+  cursor: pointer;
+  color: #fff;
+  background-color: #000;
+}
+
+/* .boton-control:hover {
+  background-color: #fff;
+  color:#000;
+} */
+
+
+
+.mensaje {
+  margin-left: 3em;
+  padding-top: 1em;
+  font-size: 1em;
+}
+
+footer {
+  margin-top: 2em;
+}
+
+
+.lista {
+  margin-left: 2em;
+}
+
+.container-datos-personales {
+  width: 400px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin-left: 11em;
+  padding: 1em;
+}
+
+.container-table {
+  margin-top: 2em;
+  margin-right: 2em;
+}
+
+.head-table {
+  width: 230px;
+  background-color:darkcyan;
+}
+

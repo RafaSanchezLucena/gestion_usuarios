@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        <%= titulo%>
+    </title>
+    <%- include("partials/head.html") %>
+</head>
+
+<body>
+    <%- include("partials/nav.html") %>
+        <div class="container">
+            <h1>Gestor de usuarios</h1>
+        </div>
+
+        <div class="container-general">
+            <form class="container-formulario-uno">
+                <div class="titulo">
+                    <div class="titulo-principal">Consultar / Eliminar</div>
+                </div>
+                <div class="numero-dni">
+                    <input type="input" class="campo-dni-consulta" required autofocus placeholder="Introduce DNI">
+                </div>
+
+                <div class="container">
+                    <input type="sumbit" class="boton-control" id="consultar" value="Consultar">
+                    <input type="sumbit" class="boton-control" id="mostrar" value="Mostrar">
+                    <input type="sumbit" class="boton-control" id="eliminar" value="Eliminar">
+                    <input type="reset" class="boton-control" id="limpiar1" value="Limpiar">
+                </div>
+            </form>
+            <form class="container-formulario-dos">
+                <div class="titulo">
+                    <div class="titulo-principal">Insertar / Actualizar</div>
+                </div>
+                <div class="numero-dni">
+                    <input type="input" class="campo-dni" required autofocus placeholder="Introduce DNI">
+                </div>
+                <div class="nombre">
+                    <input type="input" class="campo-nombre" required placeholder="Introduce nombre">
+                </div>
+                <div class="apellido1">
+                    <input type="input" class="campo-apellido1" required placeholder="Introduce apellido1">
+                </div>
+                <div class="apellido2">
+                    <input type="input" class="campo-apellido2" required placeholder="Introduce apellido2">
+                </div>
+                <div class="email">
+                    <input type="email" class="campo-email" required placeholder="Introduce email">
+                </div>
+                <div class="password">
+                    <input type="password" class="campo-password" required placeholder="Introduce password">
+                </div>
+                <div class="container">
+                    <input type="sumbit" class="boton-control" id="insertar" value="Insertar">
+                    <input type="sumbit" class="boton-control" id="actualizar" value="Actualizar">
+                    <input type="reset" class="boton-control" id="limpiar2" value="Limpiar">
+                </div>
+            </form>
+        </div>
+        <div class="mensaje">
+            
+        </div>
+        <%- include("partials/footer.html") %>
+
+</body>
+<%- include("partials/foot.html") %>
+
+</html>
