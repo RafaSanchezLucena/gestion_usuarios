@@ -11,7 +11,8 @@ const botonMostrar = document.querySelector("#mostrar");
 const botonInsertar = document.querySelector("#insertar");
 const botonActualizar = document.querySelector("#actualizar");
 const botonEliminar = document.querySelector("#eliminar");
-const div = document.querySelector(".mensaje");
+const div1 = document.querySelector("#mensaje");
+const tbody = document.querySelector("tbody");
 const botonLimpiar1 = document.querySelector("#limpiar1");
 const botonLimpiar2 = document.querySelector("#limpiar2");
 
@@ -25,73 +26,50 @@ class Persona {
     this.email = email;
     this.password = password;
   }
-}
+};
 
-// Consulta un nuevo contacto
+// Muestra los datos que corresponden con el dni
 const consultarDatos = async (dni) => {
   const url = "http://127.0.0.1:3000/user/" + dni;
   try {
     const response = await fetch(url);
     const data = await response.json();
     const elemento = data.map(
-      (element) => //html
-                     `<table class="container-table">
-                        <tr>
-                            <th class="head-table">DNI</th>
-                            <th class="head-table">Nombre</th>
-                            <th class="head-table">Apellido1</th>
-                            <th class="head-table">Apellido2</th>
-                            <th class="head-table">Email</th>
-                            <th class="head-table">Password</th>
-                        </tr>
-                        <tr>
-                            <td>${element.dni}</td>
-                            <td>${element.nombre}</td>
-                            <td>${element.apellido1}</td>
-                            <td>${element.apellido2}</td>
-                            <td>${element.email}</td>
-                            <td>${element.password}</td>
-                            
-                        </tr>
-                      </table>`
+      (element) => /*html*/ `<tr>
+                              <td class="celda">${element.dni}</td>
+                              <td class="celda">${element.nombre}</td>
+                              <td class="celda">${element.apellido1}</td>
+                              <td class="celda">${element.apellido2}</td>
+                              <td class="celda">${element.email}</td>
+                              <td class="celda">${element.password}</td>                  
+                            </tr>`
     );
-    return (div.innerHTML = elemento);
+    return (tbody.innerHTML = elemento);
   } catch (error) {
-    div.innerHTML = //html 
-    `<h3>La consulta no ha devuelto ningún resultado.</h3>`;
+    div1.innerHTML = //html 
+      `<h3>La consulta no ha devuelto ningún resultado.</h3>`;
   }
 };
 
-// Consulta un nuevo contacto
+// Muestra todos los datos de la BD
 const mostrarDatos = async () => {
   const url = "http://127.0.0.1:3000/user";
   try {
     const response = await fetch(url);
     const data = await response.json();
     const elemento = data.map(
-      (element) => //html
-      `<table class="container-table">
-                        <tr>
-                            <th class="head-table">DNI</th>
-                            <th class="head-table">Nombre</th>
-                            <th class="head-table">Apellido1</th>
-                            <th class="head-table">Apellido2</th>
-                            <th class="head-table">Email</th>
-                            <th class="head-table">Password</th>
-                        </tr>
-                        <tr>
-                            <td>${element.dni}</td>
-                            <td>${element.nombre}</td>
-                            <td>${element.apellido1}</td>
-                            <td>${element.apellido2}</td>
-                            <td>${element.email}</td>
-                            <td>${element.password}</td>
-                        </tr>
-                      </table>`
+      (element) => /*html*/ `<tr>
+                              <td class="celda">${element.dni}</td>
+                              <td class="celda">${element.nombre}</td>
+                              <td class="celda">${element.apellido1}</td>
+                              <td class="celda">${element.apellido2}</td>
+                              <td class="celda">${element.email}</td>
+                              <td class="celda">${element.password}</td>
+                             </tr>`
     );
-    return (div.innerHTML = elemento.join(""));
+    return (tbody.innerHTML = elemento.join(""));
   } catch (error) {
-    divFila.innerHTML = `${error}`;
+    div1.innerHTML = `${error}`;
   }
 };
 
@@ -107,9 +85,9 @@ const insertarDatos = async (datos, dni) => {
       body: datos,
     });
     const data = await response.text();
-    return (div.innerHTML = `<h3>${data}</h3>`);
+    return (div1.innerHTML = /*html*/ `<h3>${data}</h3>`);
   } catch (error) {
-    div.innerHTML = `<h3>${error}</h3>`;
+    div1.innerHTML = /*html*/ `<h3>${error}</h3>`;
   }
 };
 
@@ -125,9 +103,9 @@ const actualizarDatos = async (datos, dni) => {
       body: datos,
     });
     const data = await response.text();
-    return (div.innerHTML = `<h3>${data}</h3>`);
+    return (div1.innerHTML = /*html*/ `<h3>${data}</h3>`);
   } catch (error) {
-    div.innerHTML = `<h3>${error}</h3>`;
+    div1.innerHTML = /*html*/ `<h3>${error}</h3>`;
   }
 };
 
@@ -142,9 +120,9 @@ const eliminarDatos = async (dni) => {
       },
     });
     const data = await response.text();
-    return (div.innerHTML = `<h3>${data}</h3>`);
+    return (div1.innerHTML = /*html*/ `<h3>${data}</h3>`);
   } catch (error) {
-    div.innerHTML = `<h3>${error}</h3>`;
+    div1.innerHTML = /*html*/ `<h3>${error}</h3>`;
   }
 };
 
@@ -207,11 +185,11 @@ botonEliminar.addEventListener("click", () => {
 });
 
 botonLimpiar1.addEventListener("click", () => {
-  return (div.innerHTML = " ");
+  return (div1.innerHTML = " ");
 });
 
 botonLimpiar2.addEventListener("click", () => {
-  return (div.innerHTML = " ");
+  return (div1.innerHTML = " ");
 });
 
 
