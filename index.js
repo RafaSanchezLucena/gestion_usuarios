@@ -4,10 +4,10 @@ const path = require("path");
 const app = express();
 const cors = require("cors");
 
-
+app.set("port", process.env.PORT || 3000);
 
 // Servidor web
-app.listen(3000, () => {
+app.listen(app.get("port"), () => {
     console.log("Servidor creado en puerto 3000");
 });
 
