@@ -48,6 +48,7 @@ const consultarDatos = async (dni) => {
   } catch (error) {
     div1.innerHTML = //html 
       `<h3>La consulta no ha devuelto ningún resultado.</h3>`;
+    tbody.innerHTML = "";
   }
 };
 
@@ -185,11 +186,13 @@ botonEliminar.addEventListener("click", () => {
 });
 
 botonLimpiar1.addEventListener("click", () => {
-  return (div1.innerHTML = " ");
+  div1.innerHTML = " ";
+  tbody.innerHTML = " ";
 });
 
 botonLimpiar2.addEventListener("click", () => {
-  return (div1.innerHTML = " ");
+  div1.innerHTML = " ";
+  tbody.innerHTML = " ";
 });
 
 
